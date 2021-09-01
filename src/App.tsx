@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HomePage } from './pages/index'
+import { HomePage, RegisterPage, SignInPage, DetailPage } from './pages/index'
 
 function App() {
   return (
@@ -9,7 +9,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route path='/signIn' render={() => <h1>登录页面</h1>} />
+          <Route path='/signIn' component={SignInPage} />
+          <Route path='/register' component={RegisterPage} />
+          <Route path='/detail/:touristRouteId' component={DetailPage} />
           <Route render={() => <h1> 404 Not Found</h1>} />
         </Switch>
       </BrowserRouter>
