@@ -4,6 +4,6 @@
 
 .page-content {
   width: 1230px;
-  height: 75vh;
+  min-height: 75vh;
   margin: 0 auto;
 }
